@@ -1,8 +1,8 @@
 // ==UserScript==
 // @name           Clean and Simple FilesTube
 // @namespace      Clean-and-Simple-FilesTube
-// @updateURL      https://userscripts.org/scripts/source/122203.meta.js
-// @downloadURL    https://userscripts.org/scripts/source/122203.user.js
+// @updateURL      https://raw.githubusercontent.com/DarkSkul/Clean-and-Simple-FilesTube/master/Clean-and-Simple-FilesTube.user.js
+// @downloadURL    https://raw.githubusercontent.com/DarkSkul/Clean-and-Simple-FilesTube/master/Clean-and-Simple-FilesTube.user.js
 // @require        http://code.jquery.com/jquery.min.js
 // @author         DarkSkul
 // @description    Show directly the links and their source and remove All the Ads and unnecessary items from Filestube.to
