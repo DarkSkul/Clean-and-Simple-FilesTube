@@ -94,7 +94,7 @@ $(document).ready(function(){
 		});
 		
 		//Hide unwanted items
-		GM_addStyle("#spla, .rQ, .rB, .spL, .rSt, .rS, .rate, .alt_button, #recent {\ndisplay:none !important;\n}");
+		GM_addStyle(".rBvi, #spla, .rQ, .rB, .spL, .rSt, .rS, .rate, .alt_button, #recent {\ndisplay:none !important;\n}");
 	}
 	
 	else { // Download page
