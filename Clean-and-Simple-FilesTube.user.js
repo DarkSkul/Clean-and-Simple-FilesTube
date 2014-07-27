@@ -8,8 +8,8 @@
 // @description    Show directly the links and their source and remove All the Ads and unnecessary items from Filestube.to
 // @include        http://www.filestube.to/*
 // @grant          GM_addStyle
-// @grant	         GM_xmlhttpRequest
-// @grant	         GM_setClipboard
+// @grant          GM_xmlhttpRequest
+// @grant          GM_setClipboard
 // @version        9.2
 // @source         
 
