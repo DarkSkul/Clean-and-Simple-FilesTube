@@ -8,9 +8,9 @@
 // @description    Show directly the links and their source and remove All the Ads and unnecessary items from Filestube.to
 // @include        http://www.filestube.to/*
 // @grant          GM_addStyle
-// @grant          GM_xmlhttpRequest
-// @grant          GM_setClipboard
-// @version        9.2
+// @grant		    GM_xmlhttpRequest
+// @grant		    GM_setClipboard
+// @version        9.3
 // @source         
 
 // ==/UserScript==
@@ -73,7 +73,7 @@ function getLinks(loadUrl,resultLink) {
 
 str = location.href;
 $(document).ready(function(){
-	if( str.search(/filestube.to\/?$/ig) != -1 ) { // Home page	
+	if( str.search(/filestube.to\/?$/ig) !== -1 ) { // Home page	
 		//style
 		$(".logo").css("margin-top","50px");
 		
@@ -81,12 +81,13 @@ $(document).ready(function(){
 		GM_addStyle(".hB, .mcl {\ndisplay:none !important;\n}");
 	}
 	
-	else if( (str.search(/filestube.to\/[^\/]+\/.+/ig) != -1) || (str.search(/query\.html/ig) != -1) ) { // Results page		
+	else if( (str.search(/filestube.to\/[^\/]+\/.+/ig) !== -1) || (str.search(/query\.html/ig) !== -1) ) { // Results page		
 		//style
 		$("#results-holder").css("padding-left", "5%");
 		$("#results").css("width", "100%");
 		$(".iRss").clone().css("margin-right", "10%").css("padding", "0px 10px").appendTo(".cf");
-		
+		$("#pager").css("padding", "0");
+                
 		//links & source
 		$("a.rL").each(function(){
 			url = $(this).attr('href');
@@ -94,7 +95,7 @@ $(document).ready(function(){
 		});
 		
 		//Hide unwanted items
-		GM_addStyle(".rBvi, #spla, .rQ, .rB, .spL, .rSt, .rS, .rate, .alt_button, #recent {\ndisplay:none !important;\n}");
+		GM_addStyle("#most-popular-topics, .rBvi, #spla, .rQ, .rB, .spL, .rSt, .rS, .rate, .alt_button, #recent {\ndisplay:none !important;\n}");
 	}
 	
 	else { // Download page
@@ -105,7 +106,7 @@ $(document).ready(function(){
 		
 		//Hide unwanted items
 		$("#disqus_thread").remove();
-		GM_addStyle(".lS, #ac_form, .sr, #ajx_rate, H2, .fSl, .rl > DL ~ * {\ndisplay:none !important;\n}");
+		GM_addStyle(".dsq-brlink, .lS, #ac_form, .sr, #ajx_rate, H2, .fSl, .rl > DL ~ * {\ndisplay:none !important;\n}");
 		
 		//source
 		sourcelink=$('.fSrc').html();
